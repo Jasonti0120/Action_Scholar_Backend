@@ -23,5 +23,5 @@ from ActionScholars import views
 # ]
 
 urlpatterns = [
-    url('', views.html)
+    url('', views.home)
 ]
