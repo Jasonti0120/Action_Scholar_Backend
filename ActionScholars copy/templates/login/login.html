@@ -1,3 +1,4 @@
+{% load socialaccount %}
 <!DOCTYPE html>
 <html>
 
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="../../static/ActionScholars/css/untitled.css">
 </head>
 
-<body class="bg-gradient-primary" style="width: 80%;">
+<body class="bg-gradient-primary" style="width: 100%;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-9 col-lg-12 col-xl-10" style="margin: 10px;">
@@ -34,10 +35,10 @@
                                                 <div class="form-check" ><input class="form-check-input custom-control-input"  type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1"><h4 class="text-dark mb-4">Remember Me</h4></label></div>
                                             </div>
                                         </div><button class="btn btn-primary btn-block text-white btn-user" type="submit">Login</button>
-                                        <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a>
+                                        <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button" href="{% provider_login_url 'google' %}"></i>&nbsp; Login with Google</a>
                                         <hr>
                                     </form>
-                                    <div class="text-center"><a class="small" href="forgot-password.html"> <h4 class="text-dark mb-4">Forgot Password?</h4></a></div>
+                                    <div class="text-center"><a class="small" href=""> <h4 class="text-dark mb-4">Forgot Password?</h4></a></div>
                                     <div class="text-center"></div>
                                 </div>
                             </div>
