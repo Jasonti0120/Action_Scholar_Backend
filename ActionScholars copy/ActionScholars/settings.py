@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'log_in',
+    'main',
 
     'allauth',
     'allauth.account',
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'ActionScholars.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Scholars',
+        'NAME': 'ActionScholars',
         'USER': 'root',
         'PASSWORD': 'Jt18811309708@',
         'HOST': '127.0.0.1',
