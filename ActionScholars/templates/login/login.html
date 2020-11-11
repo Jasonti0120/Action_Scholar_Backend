@@ -3,43 +3,52 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
     <title>Login - Action Scholar Progress Log</title>
-    {% load static %}
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/ActionScholars/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" href="../../static/ActionScholars/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../static/ActionScholars/css/untitled.css">
 </head>
 
 <body class="bg-gradient-primary" style="width: 100%;">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-12 col-xl-10" style="margin: 67px;">
+            <div class="col-md-9 col-lg-12 col-xl-10" style="margin: 10px;">
                 <div class="card shadow-lg o-hidden border-0 my-5">
                     <div class="card-body p-0">
                         <div class="row">
-                            <div class="col-lg-6 offset-xl-0 d-none d-lg-flex">
-                              {% load static %}
-                              <img src="{% static "ActionScholars/img/Gateway_Visitors_SQ.jpg" %}" alt="GateWay"/>
+                            <div class="col-lg-6 offset-xl-0 d-none d-lg-flex" >
+                                <center><img src="../../static/ActionScholars/img/Gateway_Visitors_SQ.jpg" alt="GateWay" width = 110% height = 110%/></center>
                               </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h4 class="text-dark mb-4">Welcome Action Scholar!</h4>
+                                        <h1 class="text-dark mb-4">Welcome Action Scholar!</h1>
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
-                                        <div class="form-group"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
+                              <form class="user" method="POST" action="">
+                                    {% csrf_token %}
+                                        <div class="input-group mb-3">
+                                          <div class="input-group-append">
+								                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+							                                           </div>
+                                          <input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email">
+                                        </div>
+                                        <div class="input-group mb-2">
+                                          <div class="input-group-append">
+                                          			<span class="input-group-text"><i class="fas fa-key"></i></span>
+                                          </div>
+                                          <input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password">
+                                        </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <div class="form-check"><input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1">Remember Me</label></div>
+                                                <div class="form-check" ><input class="form-check-input custom-control-input"  type="checkbox" id="formCheck-1"><label class="form-check-label custom-control-label" for="formCheck-1"><h4 class="text-dark mb-4">Remember Me</h4></label></div>
                                             </div>
-                                        </div><button class="btn btn-primary btn-block text-white btn-user" type="submit">Login</button>
-                                        <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button"><i class="fab fa-google"></i>&nbsp; Login with Google</a>
+                                        </div><button class="btn btn-primary btn-block text-white btn-user"  type="submit">Login</button>
+                                        <hr><a class="btn btn-primary btn-block text-white btn-google btn-user" role="button" href="../register"></i>&nbsp; Login with Google</a>
                                         <hr>
                                     </form>
-                                    <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>
+                                    <div class="text-center"><a class="small" href=""> <h4 class="text-dark mb-4">Forgot Password?</h4></a></div>
                                     <div class="text-center"></div>
                                 </div>
                             </div>
@@ -49,11 +58,11 @@
             </div>
         </div>
     </div>
-    {% load static %}
-    <script src="{% static "ActionScholars/js/jquery.min.js"%}""</script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </form>
+    <script src="../../static/ActionScholars/js/jquery.min.js"> </script>
+    <script src="../../static/ActionScholars/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="../../static/ActionScholars/js/theme.js"></script>
 </body>
 
 </html>
