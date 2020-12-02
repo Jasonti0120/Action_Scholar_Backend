@@ -26,7 +26,7 @@
                     <li class="nav-item"><a class="nav-link" href="../student/add_hour"><i class="far fa-plus-square"></i><span>Add hour</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="../logout"><i class="far fa-user-circle"></i><span>Logout</span></a></li>
                 </ul>
-                
+
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
@@ -108,24 +108,17 @@
                                                 <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
                                             </div>
                                         </a>
-                                        <a class="d-flex align-items-center dropdown-item" href="#">
-                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle" src="assets/img/avatars/avatar5.jpeg">
-                                                <div class="bg-success status-indicator"></div>
-                                            </div>
-                                            <div class="font-weight-bold">
-                                                <div class="text-truncate"><span>Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</span></div>
-                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
-                                            </div>
+
+
                                         </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All Alerts</a></div>
                                 </div>
                                 <div class="shadow dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown"></div>
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Jason Ti</span></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">{{name}}</span></a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
-                                        <a
-                                            class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
                                             <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
                                 </div>
                             </li>
@@ -134,7 +127,7 @@
                 </nav>
                 <div class="container-fluid border-primary">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-dark mb-0">Welcome, Jason!</h3><a href =
+                        <h3 class="text-dark mb-0">Welcome, {{name}}!</h3><a href =
   "https://docs.google.com/forms/d/e/1FAIpQLSeHn6qXd46fa2sUuN4dgG9j0RSjezzGOsqEl82PpVnZC371Rw/viewform" class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="far fa-file-alt fa-sm text-white-50"></i> Pre_Approval Form</a></div>
                     <div class="row" style="width: 1200px;height: 600px">
                         <div class="col-lg-6 mb-4">
@@ -143,21 +136,27 @@
                                     <h6 class="text-primary font-weight-bold m-0">Hours</h6>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="small font-weight-bold">Actve<span class="float-right">20%</span></h4>
+                                    <h4 class="small font-weight-bold">Active<span class="float-right">
+                                      {{Active_hour}}%
+                                    </span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="sr-only">20%</span></div>
+                                        <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: {{Active_hour}}%;"><span class="sr-only">{{Active_hour}}%</span></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Receptive hour<span class="float-right">40%</span></h4>
+                                    <h4 class="small font-weight-bold">Receptive hour<span class="float-right">
+                                      {{Receptive_hour}}%
+                                    </span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40%</span></div>
+                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{Receptive_hour}}%;"><span class="sr-only">{{Receptive_hour}}%</span></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Required<span class="float-right">60%</span></h4>
+                                    <h4 class="small font-weight-bold">Required<span class="float-right">
+                                      {{Required_hour}}%
+                                    </span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60%</span></div>
+                                        <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{Required_hour}}%;"><span class="sr-only">{{Required_hour}}%</span></div>
                                     </div>
-                                    <h4 class="small font-weight-bold">Total Progress: 2020-2021 term<span class="float-right"></span><span class="float-right">32 Hours</span></h4>
+                                    <h4 class="small font-weight-bold">Total Progress: 2020-2021 term<span class="float-right"></span><span class="float-right">{{sum}} Hours</span></h4>
                                     <div class="progress mb-4">
-                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
+                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: {{sum}}%;"><span class="sr-only">{{sum}}%</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -170,12 +169,11 @@
                                   </div>
                                   <ul class="list-group list-group-flush">
                                               {% for i in event %}
-
                                                     <li class="list-group-item">
                                                         <div class="row align-items-center no-gutters">
                                                             <div class="col mr-2">
                                                                 <h6 class="mb-0"><strong>
-                                                        {{i.name}}</strong></h6><span class="text-xs">
+                                                        {{i.name}} -- {{i.type_hour}}</strong></h6><span class="text-xs">
                                                         {{i.date}}  {{i.description}}
                                                       </span></div>
                                               </div>
